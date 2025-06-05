@@ -1,0 +1,55 @@
+<div class="mb-4">
+  <h2 class="fw-bold">Inscrever Participante</h2>
+</div>
+
+<% if (erro) { %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <%= erro %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+  </div>
+<% } %>
+
+<form action="/participantes/inscrever/<%= eventoId %>" method="POST" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input id="nome" name="nome" type="text" class="form-control" required>
+    <div class="invalid-feedback">
+      Por favor, insira o nome.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input id="email" name="email" type="email" class="form-control" required>
+    <div class="invalid-feedback">
+      Por favor, insira um email válido.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="telefone" class="form-label">Telefone</label>
+    <input id="telefone" name="telefone" type="tel" class="form-control" required>
+    <div class="invalid-feedback">
+      Por favor, insira o telefone.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Inscrever</button>
+</form>
+
+<script>
+  // Bootstrap 5 form validation example
+  (() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>

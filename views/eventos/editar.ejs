@@ -1,0 +1,32 @@
+<h2>Editar Evento</h2>
+
+<form action="/eventos/atualizar/<%= evento.id %>" method="POST">
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label>Título</label>
+      <input name="titulo" class="form-control" value="<%= evento.titulo %>" required>
+    </div>
+    <div class="col-md-6">
+      <label>Local</label>
+      <input name="local" class="form-control" value="<%= evento.local %>" required>
+    </div>
+    <div class="col-md-6">
+      <label>Data</label>
+      <input type="date" name="data" class="form-control" value="<%= evento.data.toISOString().split('T')[0] %>" required>
+    </div>
+    <div class="col-md-6">
+      <label>Hora</label>
+      <input type="time" name="hora" class="form-control" value="<%= evento.hora.slice(0,5) %>" required>
+    </div>
+    <div class="col-md-12">
+      <label>Descrição</label>
+      <textarea name="descricao" class="form-control"><%= evento.descricao %></textarea>
+    </div>
+    <div class="col-md-6">
+      <label>Máximo de Participantes</label>
+      <input type="number" name="max_participantes" class="form-control" value="<%= evento.max_participantes %>" required>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mt-3">Salvar</button>
+</form>

@@ -1,0 +1,32 @@
+<h2 class="mb-4"><%= evento ? "Editar Evento" : "Novo Evento" %></h2>
+
+<form action="<%= evento ? `/eventos/atualizar/${evento.id}` : '/eventos/criar' %>" method="POST" novalidate>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="titulo" class="form-label fw-semibold">Título</label>
+      <input id="titulo" name="titulo" type="text" class="form-control" value="<%= evento?.titulo || '' %>" required>
+    </div>
+    <div class="col-md-6">
+      <label for="local" class="form-label fw-semibold">Local</label>
+      <input id="local" name="local" type="text" class="form-control" value="<%= evento?.local || '' %>" required>
+    </div>
+    <div class="col-md-6">
+      <label for="data" class="form-label fw-semibold">Data</label>
+      <input id="data" type="date" name="data" class="form-control" value="<%= evento?.data ? evento.data.toISOString().split('T')[0] : '' %>" required>
+    </div>
+    <div class="col-md-6">
+      <label for="hora" class="form-label fw-semibold">Hora</label>
+      <input id="hora" type="time" name="hora" class="form-control" value="<%= evento?.hora ? evento.hora.slice(0,5) : '' %>" required>
+    </div>
+    <div class="col-12">
+      <label for="descricao" class="form-label fw-semibold">Descrição</label>
+      <textarea id="descricao" name="descricao" rows="4" class="form-control"><%= evento?.descricao || '' %></textarea>
+    </div>
+    <div class="col-md-6">
+      <label for="max_participantes" class="form-label fw-semibold">Máximo de Participantes</label>
+      <input id="max_participantes" type="number" name="max_participantes" min="1" class="form-control" value="<%= evento?.max_participantes || '' %>" required>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-4 px-4">Salvar</button>
+</form>

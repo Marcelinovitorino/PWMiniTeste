@@ -1,0 +1,23 @@
+{
+  "name": "miniteste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodmeon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.1"
+  }
+}
