@@ -39,28 +39,18 @@ Aplicação web para cadastro e gerenciamento de eventos em comunidades locais, 
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Frontend**: HTML, CSS, JavaScript, [Bootstrap/Tailwind CSS]
+- **Frontend**: HTML, CSS, JavaScript, [Bootstrap]
 - **Backend**: Node.js (ou outra stack definida)
 - **Banco de Dados**: MySQL 
 - **Autenticação**: JWT ou Sessão
-- **Outros**: Express, Sequelize / Mongoose (se aplicável)
+- **Outros**: Express
 
 ---
+
 
 ## 📸 Demonstração (opcional)
-Adicione capturas de tela do sistema aqui (login, lista de eventos, cadastro de participantes, etc.)
 
----
 
-## 📁 Estrutura de Pastas (exemplo)
 
-```bash
-├── public/
-├── views/
-├── routes/
-├── controllers/
-├── models/
-├── config/
-├── .env
-├── package.json
-└── README.md
+
+
