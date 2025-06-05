@@ -41,7 +41,7 @@ Aplicação web para cadastro e gerenciamento de eventos em comunidades locais, 
 
 - **Frontend**: HTML, CSS, JavaScript, [Bootstrap/Tailwind CSS]
 - **Backend**: Node.js (ou outra stack definida)
-- **Banco de Dados**: PostgreSQL / MySQL / MongoDB
+- **Banco de Dados**: MySQL 
 - **Autenticação**: JWT ou Sessão
 - **Outros**: Express, Sequelize / Mongoose (se aplicável)
 
